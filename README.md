@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Desafio: Cadastro e Listagem de Produtos
 
-## Getting Started
+Este projeto consiste em criar um sistema de cadastro e listagem de produtos utilizando Next.js. Abaixo está um exemplo visual de como deve ser a interface:
 
-First, run the development server:
+![img](./public/img/desafio-de-vaga.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este projeto foi desenvolvido como parte de um desafio para criar um sistema simples de cadastro e listagem de produtos utilizando Next.js. O objetivo foi implementar um formulário para adicionar novos produtos e uma tabela para listar os produtos cadastrados, com funcionalidades de ordenação por valor e opção de disponibilidade para venda.
+Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    Next.js
+    React
+    Axios (simulação de requisições HTTP para API local)
+    Tailwind CSS (para estilização)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Funcionalidades Implementadas
+Formulário de Cadastro
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+O formulário de cadastro foi implementado com os seguintes campos:
 
-## Learn More
+    Nome do Produto (campo de texto)
+    Descrição do Produto (campo de texto)
+    Valor do Produto (campo de valor numérico)
+    Disponível para Venda (campo com opções: sim / não)
 
-To learn more about Next.js, take a look at the following resources:
+Listagem de Produtos
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A listagem de produtos foi exibida em uma tabela com as seguintes colunas:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    Nome
+    Valor
 
-## Deploy on Vercel
+Funcionalidades Adicionais
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Ordenação por Valor: Os produtos foram listados em ordem crescente de valor.
+    Abertura Automática da Listagem: Após cadastrar um novo produto, a listagem é atualizada automaticamente.
+    Botão para Cadastro: Um botão na listagem permite adicionar um novo produto.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Simulação de Conexão com API Local
+
+Para simular o backend, foi utilizado um arquivo local para armazenar os dados dos produtos. As operações de CRUD (Create, Read, Update, Delete) foram simuladas utilizando Axios para realizar requisições HTTP.
+Estrutura do Projeto
+
+
+API de Produtos
+
+Este projeto utiliza uma API simples para gerenciar produtos, com rotas configuradas usando Next.js. As operações disponíveis são listagem de produtos e cadastro de novos produtos.
+Rotas
+GET /api/produtos
+
+    Retorna a lista de produtos cadastrados.
+
+Exemplo de uso:
+
+bash
+
+curl http://localhost:3000/api/produtos
+
+POST /api/produtos
+
+    Cadastra um novo produto com base nos dados fornecidos no corpo da requisição.
+
+Como Executar o Projeto
+
+    Clone este repositório.
+    Instale as dependências usando npm install ou yarn install.
+    Inicie o servidor de desenvolvimento com npm run dev ou yarn dev.
+    Acesse o aplicativo no seu navegador através de http://localhost:3000.
+
+Este README fornece uma visão geral do projeto, explicando as tecnologias utilizadas, as funcionalidades implementadas e como executar o projeto localmente. Certifique-se de ajustar os detalhes conforme necessário para refletir fielmente o seu projeto específico e suas implementações.
+
+
